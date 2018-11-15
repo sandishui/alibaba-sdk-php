@@ -39,9 +39,9 @@ function main($url ){
     $code =  getHttpCode($url);
     checkHttpCode($code);
 }
-//$url = "https://huodong.aliyuncs.com";
+$url = "https://huodong.aliyuncs.com";
 //$url = "http://www.baidu.com";
-//main($url )
+main($url )
 
 
 
