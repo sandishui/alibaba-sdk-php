@@ -27,17 +27,23 @@ function getHttpCode($url) {
 }
 
 function  checkHttpCode($code){
-    if ($code == 0){
-        echo  "error: ",$code;
-    }else{
+    if ($code == 400){
         echo  $code;
+    }else{
+        throw new Exception("httpcode error");
     }
 }
 
 
-$code =  getHttpCode("https://huodong.aliyuncs.com");
+function main($url ){
+    $code =  getHttpCode($url);
+    checkHttpCode($code);
+}
+//$url = "https://huodong.aliyuncs.com";
+//$url = "http://www.baidu.com";
+//main($url )
 
 
-checkHttpCode($code);
+
 
 ?>
